@@ -8,17 +8,13 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 320px; /*так все-таки нужно делать фиксированный враппер или в %? */
+  width: 320px;
   margin: 0 auto;
   justify-content: space-between;
 }
 
 .news-item {
   width: 100%;
-}
-
-.news-item:nth-child(5) {
-  background-color: blue;
 }
 
 .news-item:nth-child(3) {
@@ -39,6 +35,14 @@ body {
 .news-item__title--white {
   color: #ffffff;
   font-weight: bold;
+  position: absolute;
+  z-index: 0;
+  bottom: 7.8%;
+  left: 6.25%;
+}
+
+.news-item:nth-child(5) {
+  position: relative;
 }
 
 .news-item__image--position {
@@ -55,7 +59,7 @@ body {
 
 @media (min-width: 1024px) {
   .news {
-    width: 640px; /*так все-таки нужно делать фиксированный враппер или в %? */ /*width: 62.5%;*/
+    width: 640px;
   }
 
   .news-item {
@@ -79,12 +83,21 @@ body {
     margin-right: auto;
   }
 
+  .news-item__title--white {
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    z-index: 0;
+    bottom: 4%;
+    left: 3%;
+  }
+
 }
 
 @media (min-width: 1900px) {
 
   .news {
-    width: 980px; /*так все-таки нужно делать фиксированный враппер или в %? */ /*width: 53.68%;*/
+    width: 980px;
     margin: 0 auto;
     justify-content: space-between;
   }
