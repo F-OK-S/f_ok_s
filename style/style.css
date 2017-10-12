@@ -1,19 +1,16 @@
 body {
   padding: 0;
   margin: 0;
-}
-
-h2 {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: normal;
-  color: #474d4a;
+  font-family: 'Noto Sans', 'Arial', sans-serif;
 }
 
 .news {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 320px; /*так все-таки нужно делать фиксированный враппер или в %? */
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .news-item {
@@ -21,7 +18,7 @@ h2 {
 }
 
 .news-item:nth-child(5) {
-  background-color: pink;
+  background-color: blue;
 }
 
 .news-item:nth-child(3) {
@@ -32,36 +29,83 @@ h2 {
   order: 1;
 }
 
+.news-item__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #474d4a;
+}
+
+.news-item__title--white {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.news-item__image--position {
+
+}
+
 .news-item__abstract {
   display: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #474d4a;
 }
 
 @media (min-width: 1024px) {
-  .news-item {
-    width: 50%;
+  .news {
+    width: 640px; /*так все-таки нужно делать фиксированный враппер или в %? */ /*width: 62.5%;*/
   }
+
+  .news-item {
+    width: 46.88%;
+    margin-bottom: 6.25%;
+  }
+
+  .news-item:nth-child(5) {
+    width: 100%;
+  }
+
   .news-item:nth-child(3) {
     order: 1;
   }
   .news-item:nth-child(7) {
     order: 0;
   }
-  .news-item:nth-child(5) {
-    width: 100%;
-  }
+
   .news-item:nth-child(4) {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
+
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1900px) {
+
+  .news {
+    width: 980px; /*так все-таки нужно делать фиксированный враппер или в %? */ /*width: 53.68%;*/
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
   .news-item {
-    width: 33.3%;
+    width: 30.6%;
+    margin-bottom: 4.1%;
   }
+
   .news-item:nth-child(5) {
-    width: 66.6%;
+    width: 65.3%;
   }
+
+  .news-item:nth-child(4) { /* почему-то если не прописать явно magrin , то берется более  специфичный марджин из min-width: 1024 px*/
+    margin-bottom: 4.1%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .news-item:nth-child(3) {
     order: 0;
   }
+
 }
