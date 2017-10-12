@@ -121,4 +121,13 @@ body {
     order: 0;
   }
 
+  .news-item__title--white {
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    z-index: 0;
+    bottom: 4%;
+    left: 3%;
+  }
+
 }
