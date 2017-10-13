@@ -8,21 +8,11 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 320px;
   margin: 0 auto;
-  justify-content: space-between;
 }
 
 .news-item {
-  width: 100%;
-}
-
-.news-item:nth-child(3) {
-  order: 2;
-}
-
-.news-item:nth-child(7) {
-  order: 1;
+  line-height: 0; /*для того, чтобы у картинки не было отступов непонятных снизу!*/
 }
 
 .news-item__title {
@@ -30,36 +20,63 @@ body {
   line-height: 24px;
   font-weight: normal;
   color: #474d4a;
+  margin-top: 4.68%;
+  margin-bottom: 0px;
 }
 
-.news-item__title--white {
+.news-item__title--inside {
   color: #ffffff;
   font-weight: bold;
   position: absolute;
-  z-index: 0;
-  bottom: 7.8%;
-  left: 6.25%;
-}
-
-.news-item:nth-child(5) {
-  position: relative;
-}
-
-.news-item__image--position {
-
 }
 
 .news-item__abstract {
-  display: none;
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
   color: #474d4a;
 }
 
-@media (min-width: 1024px) {
-  .news {
+.news-item__abstract--invisible {
+  display: none;
+}
+
+.news-item--main-news__wrapper {
+  position: relative;
+}
+
+@media (max-width: 1023px) {
+
+  .news--small {
+    width: 320px;
+    justify-content: space-between;
+  }
+
+  .news-item--small {
+    width: 100%;
+    margin-bottom: 12.5%;
+  }
+
+  .news-item__title--inside-small { /*для pixel perfect подкорректировать значения процентов*/
+    margin-top: 7.8%;
+    bottom: 10%;
+    left: 6.25%;
+  }
+
+  .news-item:nth-child(3) {
+    order: 2;
+  }
+
+  .news-item:nth-child(7) {
+    order: 1;
+  }
+
+}
+@media (min-width: 1024px) and (max-width: 1989px) {
+
+  .news--middle {
     width: 640px;
+    justify-content: space-between;
   }
 
   .news-item {
@@ -67,13 +84,20 @@ body {
     margin-bottom: 6.25%;
   }
 
-  .news-item:nth-child(5) {
+  .news-item--main-news { /*.news-item:nth-child(5) */
     width: 100%;
+  }
+
+  .news-item__title--inside-middle {
+    margin-top: 0;
+    bottom: 10%;
+    left: 3.1%;
   }
 
   .news-item:nth-child(3) {
     order: 1;
   }
+
   .news-item:nth-child(7) {
     order: 0;
   }
@@ -83,22 +107,11 @@ body {
     margin-right: auto;
   }
 
-  .news-item__title--white {
-    color: #ffffff;
-    font-weight: bold;
-    position: absolute;
-    z-index: 0;
-    bottom: 4%;
-    left: 3%;
-  }
-
 }
-
 @media (min-width: 1900px) {
 
-  .news {
+  .news--big {
     width: 980px;
-    margin: 0 auto;
     justify-content: space-between;
   }
 
@@ -107,9 +120,15 @@ body {
     margin-bottom: 4.1%;
   }
 
-  .news-item:nth-child(5) {
-    width: 65.3%;
+  .news-item__title--inside-big {
+    margin-top: 0;
+    bottom: 10%;
+    left: 3.1%;
   }
+
+  .news-item--main-news { /*.news-item:nth-child(5) */
+      width: 65.3%;
+    }
 
   .news-item:nth-child(4) { /* почему-то если не прописать явно magrin , то берется более  специфичный марджин из min-width: 1024 px*/
     margin-bottom: 4.1%;
@@ -119,15 +138,6 @@ body {
 
   .news-item:nth-child(3) {
     order: 0;
-  }
-
-  .news-item__title--white {
-    color: #ffffff;
-    font-weight: bold;
-    position: absolute;
-    z-index: 0;
-    bottom: 4%;
-    left: 3%;
   }
 
 }
