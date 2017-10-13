@@ -79,7 +79,7 @@ body {
     justify-content: space-between;
   }
 
-  .news-item {
+  .news-item--middle {
     width: 46.88%;
     margin-bottom: 6.25%;
   }
