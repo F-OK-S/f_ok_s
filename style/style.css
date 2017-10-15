@@ -3,6 +3,13 @@ body {
   margin: 0;
   font-family: 'Noto Sans', 'Arial', sans-serif;
 }
+
+/*.test {
+  width: 320px;
+  height: 200px;
+  background-color: rgba(255, 0, 0, 0.5);
+}*/
+
 .view-control {
   display: block;
   position: fixed;
@@ -45,13 +52,21 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
-  color: #474d4a;
-  margin-top: 4.68%;
+  /*color: #474d4a;*/
+  /**********/
+  color: red;
+  /*********/
+  margin-top: 3%; /*(вместо 4.68%; - почему?)*/
   margin-bottom: 0px;
+  margin-left: 6%;
+  margin-right: 6.2%;
 }
 
 .news-item__title--inside {
-  color: #ffffff;
+  /*color: #ffffff;*/
+  /**********/
+  color: red;
+  /*********/
   font-weight: bold;
   position: absolute;
 }
@@ -72,6 +87,13 @@ body {
 }
 
 @media (max-width: 1023px) {
+
+  .news {
+    background-repeat: no-repeat;
+    /*background-position: 50% 0;*/
+    background-image: url( "../images/index-mobile.png" );
+  }
+
   .view-control {
     display: none;
   }
@@ -82,7 +104,7 @@ body {
 
   .news-item--size {
     width: 100%;
-    margin-bottom: 12.5%;
+    margin-bottom: 15%; /*(вместо 12.5%)*/
   }
 
   .news-item__title--inside--size { /*для pixel perfect подкорректировать значения процентов*/
