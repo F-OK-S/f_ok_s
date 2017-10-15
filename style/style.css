@@ -88,7 +88,7 @@ h2 {
 }
 
 .news-item--size {
-  margin-bottom: 47px; /*15%; /*(вместо 12.5%)*/
+  margin-bottom: 46px; /*15%; /*(вместо 12.5%)*/
 }
 
 .news-item:nth-child(2) {
