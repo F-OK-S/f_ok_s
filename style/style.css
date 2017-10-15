@@ -165,7 +165,7 @@ h2 {
     margin-bottom: 50px;
   }
 }
-@media (min-width: 1024px) and (max-width: 1989px) {
+@media (min-width: 1024px) and (max-width: 1899px) {
 
   .test {
     width: 300px;
@@ -223,7 +223,34 @@ h2 {
   }
 
 }
-/*@media (min-width: 1900px) {
+@media (min-width: 1900px) {
+
+
+  .test {
+    width: 300px;
+    height: 200px;
+    background-color: rgba(255, 5, 150, 0.5);
+  }
+  .test--main {
+    width: 640px;
+    height: 230px;
+  }
+
+  .news {
+    background-repeat: no-repeat;
+    background-image: url( "../images/index-desktop.png" );
+  }
+
+
+  .news-item__title {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+
+
+
+
 
   .news--size {
     width: 980px;
@@ -232,21 +259,21 @@ h2 {
 
   .news-item--size {
     width: 30.6%;
-    margin-bottom: 4.1%;
+    /*margin-bottom: 4.1%;*/
   }
 
-  .news-item__title--inside--size {
+  /*.news-item__title--inside--size {
     margin-top: 0;
     bottom: 10%;
     left: 3.1%;
-  }
+  }*/
 
   .news-item--main-news { /*.news-item:nth-child(5) */
-  /*    width: 65.3%;
+     width: 65.3%;
     }
 
   .news-item:nth-child(4) { /* почему-то если не прописать явно magrin , то берется более  специфичный марджин из min-width: 1024 px*/
-  /*  margin-bottom: 4.1%;
+    margin-bottom: 4.1%;
     margin-left: 0;
     margin-right: 0;
   }
