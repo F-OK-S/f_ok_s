@@ -3,12 +3,11 @@ body {
   margin: 0;
   font-family: 'Noto Sans', 'Arial', sans-serif;
 }
-h2 {
-  padding: 0;
-  margin: 0;
-}
 
 
+/*.q {
+  quotes: "&#34;" "\0027";
+}*/
 
 .view-control {
   display: block;
@@ -40,58 +39,60 @@ h2 {
 
 .news {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
 }
 
 .news-item {
   line-height: 0; /*для того, чтобы у картинки не было отступов непонятных снизу!*/
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .news-item__title {
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
-  /*color: #474d4a;*/
-  /**********/
+  padding: 0;
+  margin: 0;
+
   color: red;
-  /*********/
-  /*margin-top: /*3%; /*(вместо 4.68%; - почему?)*/
-  /*margin-bottom: /*0px;*/
-  /*margin-left: /*6%;
-  margin-right: 6.2%;*/
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
-/*.news-item__title--inside {
-  color: #ffffff;
+
+.news-item__title--main {
   font-weight: bold;
-  position: absolute;
-}*/
+  color: #ffffff;
+  /*position: absolute;*/
+  /*color: #474d4a;*/
+  color: red;
+}
+
+
 
 .news-item__abstract {
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
-  color: #474d4a;
+  /*color: #474d4a;*/
+  color: blue;
+  padding: 0;
+  margin: 0;
 }
 
-.news-item__abstract--invisible {
+/*.news-item__abstract--invisible {
   display: none;
-}
+}*/
 
 .news-item--main-news__wrapper {
   position: relative;
 }
 
-.news-item--size {
-  margin-bottom: 46px; /*15%; /*(вместо 12.5%)*/
-}
+/*.news-item--size {
+  margin-bottom: 46px; /*15%; /*(вместо 12.5%)*
+}*/
 
-.news-item:nth-child(2) {
+/*.news-item:nth-child(2) {
   margin-bottom: 45px;
 }
 
@@ -105,10 +106,68 @@ h2 {
 
 .news-item--main-news {
   margin-bottom: 50px;
+}*/
+
+@media  (max-width: 999px) { /*режим строка*/
+
+  .news {
+    background-repeat: no-repeat;
+    background-image: url( "../images/index-desktop-line.png" );
+  }
+
+
+
+ .news--size {
+    max-width: 980px; /*если задать просто ширину, то масштабировании,
+    она не будет сжиматься. А при максимум- если будет меньше, то содержимое будет сживсжиматься, т.к. это флекс.*/
+  }
+
+  .news--view {
+      flex-direction: column;
+      background-color: rgba(250,200,15,10);
+  }
+
+  .news-item--size {
+    max-width: 642px;
+    background-color: rgba(10,200,15,0.1);
+  }
+
+  .news-item--view {
+      flex-direction: row;
+      margin-bottom: 80px;
+  }
+
+  .news-item__image--size {
+    max-width: 300px; /*переделать на % - тогда она будет сжиматься */
+  }
+
+  .news-item__image--main-news-size {
+    max-width: 640px; /*переделать на % - тогда она будет сжиматься */
+  }
+
+  /*.news-item__image--main-news {
+    max-width: 640px;
+  }*/
+
+  .news-item__description {
+    max-width: 300px; /*переделать на % - тогда она будет сжиматься */
+    margin-left: 20px;
+  }
+
+  .news-item__title--view {
+    margin-top: -5px;
+    /*margin-left: 21px;*/
+    margin-bottom: 8px;
+  }
+
+  .news-item__abstract--view {
+    /*margin-left: 21px;*/
+  }
+
 }
 
 
-@media (max-width: 1023px) {
+/*@media (min-width: 1000px) and (max-width: 1023px) {
 
   .test {
     width: 320px;
@@ -130,7 +189,7 @@ h2 {
     display: none;
   }
   .news--size {
-    width: 320px;
+    max-width: 320px;
     justify-content: space-between;
   }
 
@@ -144,7 +203,7 @@ h2 {
     left: 6.25%;
   }*/
 
-  .news-item:nth-child(2) {
+  /*.news-item:nth-child(2) {
     margin-bottom: 45px;
   }
 
@@ -164,7 +223,10 @@ h2 {
   .news-item--main-news {
     margin-bottom: 50px;
   }
-}
+}*/
+
+
+
 @media (min-width: 1024px) and (max-width: 1899px) {
 
   .test {

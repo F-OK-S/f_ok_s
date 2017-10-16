@@ -1,117 +1,168 @@
 <!DOCTYPE html>
 <html lang="ru">
+
     <head>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style/normalize.css">
         <link rel="stylesheet" type="text/css" href="style/style.css">
         <link rel="stylesheet" type="text/css" href="style/font-awesome.css">
 		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
         <title>News</title>
     </head>
-    <body>
-    	<div id="view-control" class = "view-control view-control--right">
-    		 <i data-size="fullview" class="view-control__button view-control__button--active fa fa-th-large fa-3x"></i>
-    		 <i data-size="stroke" class="view-control__button fa fa-list fa-3x"></i>
-    	</div>
 
-        <div class="news news--size">
+    <body>
+
+      <div id="view-control" class = "view-control view-control--right">
+
+         <i data-size="fullview" class="view-control__button view-control__button--active fa fa-th-large fa-3x"></i>
+    		 <i data-size="stroke" class="view-control__button fa fa-list fa-3x"></i>
+
+      </div>
+
+        <div class="news news--size news--view">
 
           <!-- Блок №1 -->
-          <div class="news-item news-item--size" >
-            <div class="test">
+          <div class="news-item news-item--size news-item--view" >
+
+            <div class="news-item__image news-item__image--size">
               <picture>
-                <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img class="news-item__image" src="images/news-item__image-320px.png" width="100%"  alt="news-1">
+                <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png"><!--исправить -->
+                <img src="images/news-item__image-300px.png" width="100%"  alt="news-1">
               </picture>
             </div>
-            <h2 class="news-item__title">Культурный дольник: языковая материя <strong> или правило альтернанса? </strong></h2>
-            <p class="news-item__abstract news-item__abstract--invisible"> Ритмическая организованность таких стихов не всегда очевидна
-              при чтении "про себя", но басня нивелирует литературный пастиш.</p>
+
+            <div class="news-item__description">
+              <h2 class="news-item__title news-item__title--view">Культурный дольник: языковая материя <strong> или правило альтернанса? </strong></h2>
+              <p class="news-item__abstract news-item__abstract--view news-item__abstract--invisible"> Ритмическая организованность таких стихов не всегда очевидна
+                при чтении "про себя", но басня нивелирует литературный пастиш.</p>
+            </div>
+
           </div>
 
           <!-- Блок №2 -->
-          <div class="news-item news-item--size" >
-            <div class="test">
+          <div class="news-item news-item--size news-item--view" >
+
+            <div class="news-item__image news-item__image--size">
               <picture>
                 <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img class="news-item__image" src="images/news-item__image-320px.png" width="100%"  alt="news-2">
+                <img class="news-item__image" src="images/news-item__image-300px.png" width="100%"  alt="news-2">
               </picture>
             </div>
-              <h2 class="news-item__title">Ложная цитата как жанр</h2>
-              <p class="news-item__abstract news-item__abstract--invisible"> Тоника приводит зачин. Особую ценность, на наш взгляд, представляет цикл нивелирует ритм.</p>
+
+            <div class="news-item__description">
+              <h2 class="news-item__title news-item__title--view">Ложная цитата как жанр</h2>
+              <p class="news-item__abstract news-item__abstract--view news-item__abstract--invisible"> Тоника приводит зачин. Особую ценность, на наш взгляд, представляет цикл нивелирует ритм.</p>
+            </div>
+
           </div>
 
           <!-- Блок №3 -->
-          <div class="news-item  news-item--size" >
-            <div class="test">
+          <div class="news-item news-item--size news-item--view" >
+
+            <div class="news-item__image news-item__image--size">
               <picture>
                 <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img class="news-item__image" src="images/news-item__image-320px.png" width="100%"  alt="news-3">
+                <img class="news-item__image" src="images/news-item__image-300px.png" width="100%"  alt="news-3">
               </picture>
             </div>
-                <h2 class="news-item__title">Диссонансный дольник: гипотеза и теории</h2>
-                <p class="news-item__abstract news-item__abstract--invisible"> Метонимия отражает литературный подтекст. Синхрония традиционно осознаёт стих.</p>
+
+              <div class="news-item__description">
+                  <h2 class="news-item__title news-item__title--view">Диссонансный дольник: гипотеза и теории</h2>
+                  <p class="news-item__abstract news-item__abstract--view news-item__abstract--invisible"> Метонимия отражает литературный подтекст. Синхрония традиционно осознаёт стих.</p>
+              </div>
+
           </div>
 
           <!-- Блок №4 -->
-          <div class="news-item news-item--size" >
-            <div class="test">
+          <div class="news-item news-item--size news-item--view" >
+
+            <div class="news-item__image news-item__image--size">
               <picture>
                 <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img class="news-item__image" src="images/news-item__image-320px.png" width="100%"  alt="news-4">
+                <img class="news-item__image" src="images/news-item__image-300px.png" width="100%"  alt="news-4">
               </picture>
             </div>
-            <h2 class="news-item__title">Мифопорождающее <strong> текстовое устройство </strong> как познание текста</h2>
+
+            <div class="news-item__description">
+              <h2 class="news-item__title news-item__title--view">Мифопорождающее <strong> текстовое устройство </strong> как познание текста</h2>
+              <p class="news-item__abstract news-item__abstract--view news-item__abstract--invisible"></p>
+            </div>
+
           </div>
 
           <!-- Блок №5 -->
-          <div class="news-item news-item--size  news-item--main-news" >
-            <div class="news-item--main-news__wrapper">
-              <div class="test test--main">
+          <div class="news-item news-item--size news-item--view" >
+            <!--<div class="news-item__image news-item__image--main-news">-->
+              <div class="news-item__image news-item__image--main-news-size ">
+
                 <picture>
                   <source media = "(min-width: 1024px)" srcset = "images/news-item__telephone-640px.png">
-                  <img class="news-item__image news-item__image--position" src="images/news-item__telephone-320px.png" width="100%"  alt="news-5">
+                  <img class="news-item__image news-item__image--position" src="images/news-item__telephone-640px.png" width="100%"  alt="news-5">
                 </picture>
+
+                <h2 class="news-item__title news-item__title--main">Словесный дискурс: <br> основные моменты</h2> 
+
               </div>
-            <!--<h2 class="news-item__title news-item__title--inside news-item__title--inside--size">Словесный дискурс: <br> основные моменты</h2> -->
-            </div>
+
+
           </div>
 
+
           <!-- Блок №6 -->
-          <div class="news-item news-item--size" >
-            <div class="test">
+          <div class="news-item news-item--size news-item--view">
+
+            <div class="news-item__image news-item__image--size">
               <picture>
                 <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img class="news-item__image" src="images/news-item__image-320px.png" width="100%"  alt="news-6">
+                <img class="news-item__image" src="images/news-item__image-300px.png" width="100%"  alt="news-6">
               </picture>
             </div>
-            <h2 class="news-item__title">Диссонансный ритмический рисунок в XXI веке</h2>
-            <p class="news-item__abstract news-item__abstract--invisible"> Такое понимание синтагмы восходит к Ф.де Соссюру.</p>
+
+            <div class="news-item__description">
+              <h2 class="news-item__title news-item__title--view">Диссонансный ритмический рисунок в XXI веке</h2>
+              <p class="news-item__abstract news-item__abstract--view news-item__abstract--invisible"> Такое понимание синтагмы восходит к Ф.де Соссюру.</p>
+            </div>
+
           </div>
 
           <!-- Блок №7 -->
-          <div class="news-item news-item--size" >
-            <div class="test">
+          <div class="news-item news-item--size news-item--view">
+
+            <div class="news-item__image news-item__image--size">
               <picture>
                 <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img class="news-item__image" src="images/news-item__image-320px.png" width="100%"  alt="news-7">
+                <img class="news-item__image" src="images/news-item__image-300px.png" width="100%"  alt="news-7">
               </picture>
             </div>
-            <h2 class="news-item__title">Мелодический композиционный анализ: <strong class="news-item__emphasis"> акцент или дактиль?</strong></h2>
+
+            <div class="news-item__description">
+              <h2 class="news-item__title news-item__title--view">Мелодический композиционный анализ: <strong class="news-item__emphasis"> акцент или дактиль?</strong></h2>
+              <p class="news-item__abstract news-item__abstract--view news-item__abstract--invisible"></p>
+            </div>
+
           </div>
 
           <!-- Блок №8 -->
-          <div class="news-item news-item--size" >
-            <div class="test">
+          <div class="news-item news-item--size news-item--view">
+
+            <div class="news-item__image news-item__image--size">
                 <picture>
                   <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                  <img class="news-item__image" src="images/news-item__image-320px.png" width="100%"  alt="news-8">
+                  <img class="news-item__image" src="images/news-item__image-300px.png" width="100%"  alt="news-8">
                 </picture>
             </div>
-            <h2 class="news-item__title">Словесный подтекст: брахикаталектический стих или мужская рифма?</h2>
+
+            <div class="news-item__description">
+              <h2 class="news-item__title news-item__title--view">Словесный подтекст: брахикаталектический стих или мужская рифма?</h2>
+              <p class="news-item__abstract news-item__abstract--view news-item__abstract--invisible"></p>
+            </div>
+
           </div>
 
         </div>
+
     </body>
+
 </html>
