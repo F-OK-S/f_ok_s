@@ -141,7 +141,7 @@ body {
 
   .news-item--view {
       flex-direction: row;
-      margin-bottom: 80px;
+      margin-bottom: 12.5%; /*80px;*/
   }
 
   .news-item__image--size {
