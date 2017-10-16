@@ -4,11 +4,6 @@ body {
   font-family: 'Noto Sans', 'Arial', sans-serif;
 }
 
-
-/*.q {
-  quotes: "&#34;" "\0027";
-}*/
-
 .view-control {
   display: block;
   position: fixed;
@@ -37,10 +32,15 @@ body {
   border-radius: 10px;
 }
 
+
+.news-wrapper {
+  margin: 0 auto;
+}
+
+
 .news {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
 }
 
 .news-item {
@@ -117,6 +117,7 @@ body {
 
 @media  (max-width: 999px) { /*режим строка*/
 
+
   .news {
     background-repeat: no-repeat;
     background-image: url( "../images/index-desktop-line.png" );
@@ -135,7 +136,7 @@ body {
   }
 
   .news-item--size {
-    max-width: 640px;
+    max-width: 640px; /* эту ширину тоже задавать в %*/
     background-color: rgba(10,200,15,0.1);
   }
 
@@ -145,26 +146,26 @@ body {
   }
 
   .news-item__image--size {
-    max-width: 300px; /*переделать на % - тогда она будет сжиматься */
+    max-width: 46.875%;/*300px*/
+    /*переделать на % - тогда она будет сжиматься */
   }
 
   .news-item__image--main-news {
-    max-width: 640px; /*переделать на % - тогда она будет сжиматься */
+    max-width: 100%;/*640px*/ /*переделать на % - тогда она будет сжиматься */
   }
 
-  /*.news-item__image--main-news {
-    max-width: 640px;
-  }*/
+
 
   .news-item__description {
-    max-width: 300px; /*переделать на % - тогда она будет сжиматься */
-    margin-left: 20px;
+    max-width: 46.875%;/*300px; */
+    /*переделать на % - тогда она будет сжиматься */
+    margin-left: 3.12%/*20px;*/
   }
 
   .news-item__title--view {
-    margin-top: -5px;
+    margin-top: -1.67%;/*-5px;*/
     /*margin-left: 21px;*/
-    margin-bottom: 8px;
+    margin-bottom: 2.67%;/*8px;*/
   }
 
 
@@ -289,10 +290,74 @@ body {
   }
 
 }
-@media (min-width: 1900px) {
+@media (min-width: 1990px) {
 
 
-  .test {
+/*****временно*********/
+  .news {
+    background-repeat: no-repeat;
+    background-image: url( "../images/index-desktop-line.png" );
+  }
+/*****временно*********/
+
+  .news-wrapper--size {
+    width: 980px;
+  }
+
+ .news--size {
+    max-width: 65.3%;/*980px;*/ /*если задать просто ширину, то масштабировании,
+    она не будет сжиматься. А при максимум- если будет меньше, то содержимое будет сживсжиматься, т.к. это флекс.*/
+  }
+
+  .news--view {
+      flex-direction: column;
+      background-color: rgba(250,200,15,10);
+  }
+
+  .news-item--size {
+    max-width: 100%;/*640px;*/ /* эту ширину тоже задавать в %*/
+    background-color: rgba(10,200,15,0.1);
+  }
+
+  .news-item--view {
+      flex-direction: row;
+      margin-bottom: 12.5%; /*80px;*/
+  }
+
+  .news-item__image--size {
+    max-width: 46.875%;/*300px*/
+    /*переделать на % - тогда она будет сжиматься */
+  }
+
+  .news-item__image--main-news {
+    max-width: 100%;/*640px*/ /*переделать на % - тогда она будет сжиматься */
+  }
+
+
+
+  .news-item__description {
+    max-width: 46.875%;/*300px; */
+    /*переделать на % - тогда она будет сжиматься */
+    margin-left: 3.12%/*20px;*/
+  }
+
+  .news-item__title--view {
+    margin-top: -1.67%;/*-5px;*/
+    /*margin-left: 21px;*/
+    margin-bottom: 2.67%;/*8px;*/
+  }
+
+
+}
+
+
+
+
+
+
+
+
+  /*.test {
     width: 300px;
     height: 200px;
     background-color: rgba(255, 5, 150, 0.5);
@@ -326,7 +391,7 @@ body {
   .news-item--size {
     width: 30.6%;
     /*margin-bottom: 4.1%;*/
-  }
+  /*}
 
   /*.news-item__title--inside--size {
     margin-top: 0;
@@ -334,18 +399,18 @@ body {
     left: 3.1%;
   }*/
 
-  .news-item--main-news { /*.news-item:nth-child(5) */
-     width: 65.3%;
+  /*.news-item--main-news { /*.news-item:nth-child(5) */
+     /*width: 65.3%;
     }
 
   .news-item:nth-child(4) { /* почему-то если не прописать явно magrin , то берется более  специфичный марджин из min-width: 1024 px*/
-    margin-bottom: 4.1%;
+    /*margin-bottom: 4.1%;
     margin-left: 0;
     margin-right: 0;
   }
 
   .news-item:nth-child(3) {
     order: 0;
-  }
+  }*/
 
 }
