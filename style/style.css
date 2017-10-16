@@ -232,9 +232,60 @@ body {
 
 
 
-@media (min-width: 1024px) and (max-width: 1899px) {
+@media (min-width: 1024px) and (max-width: 1989px) {
 
-  .test {
+
+  .news {
+    background-repeat: no-repeat;
+    background-image: url( "../images/index-tablet-line.png" );
+  }
+
+  .news-wrapper--size {
+    width: 640px; /*изменяется внешний контейнер*/
+  }
+
+  .news--size {
+    max-width: 100%; /*изменяется оотношение внутренней обретки и внешнего контейнера*/
+  }
+
+  .news--view {
+    flex-direction: column;
+    background-color: rgba(250,210,250,10);
+  }
+
+  .news-item--size {
+    max-width: 100%; /*640px*/
+    background-color: rgba(10,200,15,0.1);
+  }
+
+  .news-item--view {
+      flex-direction: row;
+      margin-bottom: 12.5%; /*80px;*/
+  }
+
+  .news-item__image--size {
+    max-width: 46.875%;/*300px*/
+  }
+
+  .news-item__image--main-news {
+    max-width: 100%;/*640px*/
+  }
+
+  .news-item__description {
+    max-width: 46.875%;/*300px; */
+    margin-left: 3.12%/*20px;*/
+  }
+
+  .news-item__title--view {
+    margin-top: -1.67%;/*-5px;*/
+    margin-bottom: 2.67%;/*8px;*/
+  }
+
+
+
+
+
+  /*.test {
     width: 300px;
     height: 200px;
     background-color: rgba(255, 5, 150, 0.5);
@@ -262,18 +313,12 @@ body {
 
   .news-item--size {
     width: 46.88%;
-    /*margin-bottom: 6.25%;*/
   }
 
-  .news-item--main-news { /*.news-item:nth-child(5) */
+  .news-item--main-news {
     width: 100%;
   }
 
-  /*.news-item__title--inside--size {
-    margin-top: 0;
-    bottom: 10%;
-    left: 3.1%;
-  }*/
 
   .news-item:nth-child(3) {
     order: 1;
@@ -287,31 +332,28 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 45px;
-  }
+  }*/
 
 }
+
 @media (min-width: 1990px) {
 
-
-/*****временно*********/
   .news {
     background-repeat: no-repeat;
     background-image: url( "../images/index-desktop-line.png" );
   }
-/*****временно*********/
 
   .news-wrapper--size {
     width: 980px;
   }
 
- .news--size {
-    max-width: 65.3%;/*980px;*/ /*если задать просто ширину, то масштабировании,
-    она не будет сжиматься. А при максимум- если будет меньше, то содержимое будет сживсжиматься, т.к. это флекс.*/
+  .news--size {
+    max-width: 65.3%;
   }
 
   .news--view {
-      flex-direction: column;
-      background-color: rgba(250,200,15,10);
+    flex-direction: column;
+    background-color: rgba(250,200,15,10);
   }
 
   .news-item--size {
@@ -326,14 +368,11 @@ body {
 
   .news-item__image--size {
     max-width: 46.875%;/*300px*/
-    /*переделать на % - тогда она будет сжиматься */
   }
 
   .news-item__image--main-news {
     max-width: 100%;/*640px*/ /*переделать на % - тогда она будет сжиматься */
   }
-
-
 
   .news-item__description {
     max-width: 46.875%;/*300px; */
@@ -346,7 +385,6 @@ body {
     /*margin-left: 21px;*/
     margin-bottom: 2.67%;/*8px;*/
   }
-
 
 }
 
