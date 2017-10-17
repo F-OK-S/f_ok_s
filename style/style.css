@@ -8,6 +8,7 @@ body {
   display: block;
   position: fixed;
 }
+
 .view-control--right {
   top: 0;
   right: 0;
@@ -16,27 +17,28 @@ body {
   background: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
 }
+
 .view-control__button {
   color:white;
   cursor:pointer;
   padding:5%;
 }
+
 .view-control__button--active {
   color:black;
   background: white;
   border-radius: 10px;
 }
+
 .view-control__button:hover {
   color:black;
   background: white;
   border-radius: 10px;
 }
 
-
 .news-wrapper {
   margin: 0 auto;
 }
-
 
 .news {
   display: flex;
@@ -44,17 +46,14 @@ body {
 }
 
 .news-item {
-  line-height: 0; /*для того, чтобы у картинки не было отступов непонятных снизу!*/
+  line-height: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
 .news-item__image--main-news {
   position: relative;
-  /*height: 230px;
-  width: 640px;*/
 }
-
 
 .news-item__title {
   font-size: 18px;
@@ -71,10 +70,8 @@ body {
   font-weight: bold;
   color: #ffffff;
   position: absolute;
-  bottom: 25px;
-  left: 20px;
-  /*color: #474d4a;*/
-  /*color: red;*/
+  bottom: 10.87%;
+  left: 3.13%;
 }
 
 
@@ -364,75 +361,80 @@ body {
 
 /**************************************************************/
 
-
-
-  /*.test {
-    width: 300px;
-    height: 200px;
-    background-color: rgba(255, 5, 150, 0.5);
-  }
-  .test--main {
-    width: 640px;
-    height: 230px;
-  }
-
-  .news {
-    background-repeat: no-repeat;
-    background-image: url( "../images/index-tablet.png" );
-  }
-
-
-  .news-item__title {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .news--size {
-    width: 640px;
-    justify-content: space-between;
-  }
-
-  .news-item--size {
-    width: 46.88%;
-  }
-
-  .news-item--main-news {
-    width: 100%;
-  }
-
-
-  .news-item:nth-child(3) {
-    order: 1;
-  }
-
-  .news-item:nth-child(7) {
-    order: 0;
-  }
-
-  .news-item:nth-child(4) {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 45px;
-  }*/
-
 }
 
 @media (min-width: 1990px) {
 
+/*режии блок 1990px*/
 
-  /*.news-item:nth-child(1) { order: 1;}
+.news {
+  background-repeat: no-repeat;
+  background-image: url( "../images/index-desktop.png" );
+}
+
+  .news-item:nth-child(1) { order: 1;}
   .news-item:nth-child(2) { order: 4;}
   .news-item:nth-child(3) { order: 6;}
   .news-item:nth-child(4) { order: 2;}
   .news-item:nth-child(5) { order: 5;}
   .news-item:nth-child(6) { order: 3;}
   .news-item:nth-child(7) { order: 7;}
-  .news-item:nth-child(8) { order: 8;}*/
+  .news-item:nth-child(8) { order: 8;}
 
 
+  .news-wrapper--size {
+    width: 980px;
+  }
+
+  .news--size {
+    max-width: 100%;
+  }
+
+  .news--view {
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(100,200,15,10);
+  }
+
+  .news-item--size {
+    max-width: 30.612%;
+    background-color: rgba(10,200,15,0.1);
+  }
+
+  .news-item--view {
+      flex-direction: column;
+      margin-bottom: 4.8%;
+  }
+
+  .news-item__abstract--invisible {
+    display: none;
+  }
+
+  .news-item--main {
+    max-width: 65.306%;
+    /*margin-bottom: 8.5%;*/
+  }
 
 
-  .news {
+  .news-item__image--size {
+    max-width: 100%;
+  }
+
+  .news-item__image--main-news {
+    max-width: 100%;
+  }
+
+  .news-item__description {
+    max-width: 100%;
+  }
+
+  .news-item__title--view {
+    margin-top: 3.5%;
+  }
+
+/*************************************************************/
+/*режим строка 1990 */
+  /*.news {
     background-repeat: no-repeat;
     background-image: url( "../images/index-desktop-line.png" );
   }
@@ -451,34 +453,34 @@ body {
   }
 
   .news-item--size {
-    max-width: 100%;/*640px;*/ /* эту ширину тоже задавать в %*/
+    max-width: 100%;
     background-color: rgba(10,200,15,0.1);
   }
 
   .news-item--view {
       flex-direction: row;
-      margin-bottom: 12.5%; /*80px;*/
+      margin-bottom: 12.5%;
   }
 
   .news-item__image--size {
-    max-width: 46.875%;/*300px*/
+    max-width: 46.875%;
   }
 
   .news-item__image--main-news {
-    max-width: 100%;/*640px*/ /*переделать на % - тогда она будет сжиматься */
+    max-width: 100%;
   }
 
   .news-item__description {
-    max-width: 46.875%;/*300px; */
-    /*переделать на % - тогда она будет сжиматься */
-    margin-left: 3.12%/*20px;*/
+    max-width: 46.875%;
+    margin-left: 3.12%;
   }
 
   .news-item__title--view {
-    margin-top: -1.67%;/*-5px;*/
-    /*margin-left: 21px;*/
-    margin-bottom: 2.67%;/*8px;*/
-  }
+    margin-top: -1.67%;
+    margin-bottom: 2.67%;
+  }*/
+/*************************************************************/
+
 
 }
 
