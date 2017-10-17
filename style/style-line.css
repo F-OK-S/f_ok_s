@@ -1,0 +1,368 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans', 'Arial', sans-serif;
+}
+
+.view-control {
+  display: block;
+  position: fixed;
+}
+
+.view-control--right {
+    top: 0;
+    right: 0;
+    margin: 0.5%;
+    padding:0.5%;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+}
+
+.view-control__button {
+  color: #ffffff;
+  cursor: pointer;
+  padding: 5%;
+}
+
+.view-control__button--active {
+  color: #000000;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.view-control__button:hover {
+  color: #000000;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.news-wrapper {
+  margin: 0 auto;
+}
+
+.news {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.news-item {
+  line-height: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.news-item__image--main-news {
+  position: relative;
+}
+
+.news-item__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #474d4a;
+  padding: 0;
+  margin: 0;
+}
+
+.news-item__title--main {
+  font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+}
+
+.news-item__abstract {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #474d4a;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 499px){/*ничего из этого не видно в инспекторе*/
+
+  .view-control {
+    display: none;
+  }
+
+  /*.news {
+    background-repeat: no-repeat;
+    background-image: url( "../images/index-mobile.png" );
+  } *//* NOTE: Фоновый рисунок для проверки PixelPerfect */
+
+  .news-item:nth-child(1) { order: 1;}
+
+  .news-item:nth-child(2) { order: 3;}
+
+  .news-item:nth-child(3) { order: 5;}
+
+  .news-item:nth-child(4) { order: 2;}
+
+  .news-item:nth-child(5) { order: 4;}
+
+  .news-item:nth-child(6) { order: 8;}
+
+  .news-item:nth-child(7) { order: 7;}
+
+  .news-item:nth-child(8) { order: 6;}
+
+  .news-wrapper--size {
+     width: 100%;
+  }
+
+  .news--size {
+    width: 100%;
+  }
+
+  .news--view {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .news-item--size {
+    width: 100%;
+  }
+
+  .news-item--view {
+    flex-direction: column;
+    margin-bottom: 14%;
+  }
+
+  .news-item--view:nth-child(2) {
+    margin-bottom: 7.5%;
+  }
+
+  .news-item--view:nth-child(7) {
+    margin-bottom: 12%;
+  }
+
+  .news-item--main {
+    width: 100%;
+    margin-bottom: 16%;
+  }
+
+  .news-item__image--size {
+    width: 100%;
+  }
+
+  .news-item__image--main-news {
+    width: 100%;
+  }
+
+  .news-item__description {
+    max-width: 100%;
+  }
+
+  .news-item__title--view {
+    margin-top: 3.5%;
+    margin-left: 6.25%;
+    margin-right: 6.25%;
+  }
+
+  .news-item__title--main {
+    bottom: 10.87%;
+    left: 6.25%;
+  }
+
+  .news-item__abstract--view {
+    display: none;
+  }
+
+}
+
+@media (min-width: 500px) and (max-width: 1023px){ /*режим блок=строка 320px*/
+
+    .view-control {
+      display: none;
+    }
+
+    /*.news {
+      background-repeat: no-repeat;
+      background-image: url( "../images/index-mobile.png" );
+    }*/ /* NOTE: Фоновый рисунок для проверки PixelPerfect */
+
+    .news-item:nth-child(1) { order: 1;}
+
+    .news-item:nth-child(2) { order: 3;}
+
+    .news-item:nth-child(3) { order: 5;}
+
+    .news-item:nth-child(4) { order: 2;}
+
+    .news-item:nth-child(5) { order: 4;}
+
+    .news-item:nth-child(6) { order: 8;}
+
+    .news-item:nth-child(7) { order: 7;}
+
+    .news-item:nth-child(8) { order: 6;}
+
+    .news-wrapper--size {
+       width: 64%;
+    }
+
+    .news--size {
+      width: 100%;
+    }
+
+    .news--view {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .news-item--size {
+      width: 100%;
+    }
+
+    .news-item--view {
+      flex-direction: column;
+      margin-bottom: 14%;
+    }
+
+    .news-item--view:nth-child(2) {
+      margin-bottom: 7.5%;
+    }
+
+    .news-item--view:nth-child(7) {
+      margin-bottom: 12%;
+    }
+
+    .news-item--main {
+      width: 100%;
+      margin-bottom: 16%;
+    }
+
+    .news-item__image--size {
+      width: 100%;
+    }
+
+    .news-item__image--main-news {
+      width: 100%;
+    }
+
+    .news-item__description {
+      max-width: 100%;
+    }
+
+    .news-item__title--view {
+      margin-top: 3.5%;
+      margin-left: 6.25%;
+      margin-right: 6.25%;
+    }
+
+    .news-item__title--main {
+      bottom: 10.87%;
+      left: 6.25%;
+    }
+
+    .news-item__abstract--view {
+      display: none;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1989px) { /*режим строка 1024 резиновая */
+
+  /*.news {
+    background-repeat: no-repeat;
+    background-image: url( "../images/index-tablet-line.png" );
+  }*/ /* NOTE: Vмакет в качестве фонового рисунка дял проверки PixelPerfect */
+
+  .news-wrapper--size {
+    width: 62.5%;
+  }
+
+  .news--size {
+    width: 100%;
+  }
+
+  .news--view {
+      flex-direction: column;
+  }
+
+  .news-item--size {
+    width: 100%;
+  }
+
+  .news-item--view {
+      flex-direction: row;
+      margin-bottom: 12.5%;
+  }
+
+  .news-item__image--size {
+    width: 46.875%;
+  }
+
+  .news-item__image--main-news {
+    width: 100%;
+  }
+
+  .news-item__description {
+    max-width: 46.875%;
+    margin-left: 3.12%;
+  }
+
+  .news-item__title--view {
+    margin-top: -1.67%;
+    margin-bottom: 2.67%;
+  }
+
+  .news-item__title--main {
+    bottom: 10.87%;
+    left: 3.13%;
+  }
+
+}
+
+@media (min-width: 1990px) { /*режим строка 1990px - резиновая */
+
+      /*.news {
+        background-repeat: no-repeat;
+        background-image: url( "../images/index-desktop-line.png" );
+      }*/ /* NOTE: Макет в качестве фоного рисунка дял проверки PixelPerfect */
+
+      .news-wrapper--size {
+        width: 49.25%;
+      }
+
+      .news--size {
+        width: 65.3%;
+      }
+
+      .news--view {
+        flex-direction: column;
+      }
+
+      .news-item--size {
+        width: 100%;
+      }
+
+      .news-item--view {
+          flex-direction: row;
+          margin-bottom: 12.5%;
+      }
+
+      .news-item__image--size {
+        width: 46.875%;
+      }
+
+      .news-item__image--main-news {
+        width: 100%;
+      }
+
+      .news-item__description {
+        width: 46.875%;
+        margin-left: 3.12%;
+      }
+
+      .news-item__title--view {
+        margin-top: -1.67%;
+        margin-bottom: 2.67%;
+      }
+
+      .news-item__title--main {
+        bottom: 10.87%;
+        left: 3.13%;
+      }
+
+}
