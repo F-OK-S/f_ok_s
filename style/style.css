@@ -4,6 +4,7 @@ body {
   font-family: 'Noto Sans', 'Arial', sans-serif;
 }
 
+
 .view-control {
   display: block;
   position: fixed;
@@ -65,7 +66,6 @@ body {
   color: red;
 }
 
-
 .news-item__title--main {
   font-weight: bold;
   color: #ffffff;
@@ -73,8 +73,6 @@ body {
   bottom: 10.87%;
   left: 3.13%;
 }
-
-
 
 .news-item__abstract {
   font-size: 14px;
@@ -86,169 +84,112 @@ body {
   margin: 0;
 }
 
-/*.news-item__abstract--invisible {
-  display: none;
-}*/
+@media (min-width: 980px) and (max-width: 1023px){ /*режим блок=строка 320px*/
 
+    .view-control {
+      display: none;
+    }
 
+    .news {
+      background-repeat: no-repeat;
+      background-image: url( "../images/index-mobile.png" );
+    }
 
-/*.news-item--size {
-  margin-bottom: 46px; /*15%; /*(вместо 12.5%)*
-}*/
+    .news-item:nth-child(1) { order: 1;}
 
-/*.news-item:nth-child(2) {
-  margin-bottom: 45px;
-}
+    .news-item:nth-child(2) { order: 3;}
 
-.news-item:nth-child(7) {
-  margin-bottom: 40px;
-}
+    .news-item:nth-child(3) { order: 5;}
 
-.news-item:nth-child(6) {
-  margin-bottom: 46px;
-}
+    .news-item:nth-child(4) { order: 2;}
 
-.news-item--main-news {
-  margin-bottom: 50px;
-}*/
+    .news-item:nth-child(5) { order: 4;}
 
-@media  (max-width: 999px) { /*режим строка*/
+    .news-item:nth-child(6) { order: 8;}
 
+    .news-item:nth-child(7) { order: 7;}
 
-  .news {
-    background-repeat: no-repeat;
-    background-image: url( "../images/index-desktop-line.png" );
-  }
+    .news-item:nth-child(8) { order: 6;}
 
+    .news-wrapper--size {
+      width: 320px;
+    }
 
+    .news--size {
+      max-width: 100%;
+    }
 
- .news--size {
-    max-width: 980px; /*если задать просто ширину, то масштабировании,
-    она не будет сжиматься. А при максимум- если будет меньше, то содержимое будет сживсжиматься, т.к. это флекс.*/
-  }
-
-  .news--view {
+    .news--view {
       flex-direction: column;
-      background-color: rgba(250,200,15,10);
-  }
+      background-color: rgba(250,210,250,10);
+      flex-wrap: nowrap;
+    }
 
-  .news-item--size {
-    max-width: 640px; /* эту ширину тоже задавать в %*/
-    background-color: rgba(10,200,15,0.1);
-  }
+    .news-item--size {
+      max-width: 100%;
+      background-color: rgba(10,200,15,0.1);
+    }
 
-  .news-item--view {
-      flex-direction: row;
-      margin-bottom: 12.5%; /*80px;*/
-  }
+    .news-item--view {
+        flex-direction: column;
+        margin-bottom: 14.69%;
+    }
 
-  .news-item__image--size {
-    max-width: 46.875%;/*300px*/
-    /*переделать на % - тогда она будет сжиматься */
-  }
+    .news-item__image--size {
+      max-width: 100%;
+    }
 
-  .news-item__image--main-news {
-    max-width: 100%;/*640px*/ /*переделать на % - тогда она будет сжиматься */
-  }
+    .news-item__image--main-news {
+      max-width: 100%;
+    }
+
+    .news-item__description {
+      max-width: 100%;
+      margin-left: 6.25%;
+      margin-top: 3.125%;
+      margin-right: 6.25%;
+    }
+
+    .news-item__description--change-margin{
+      margin-top: 1.56%;
+    }
 
 
+    .news-item__abstract--view {
+      display: none;
+    }
 
-  .news-item__description {
-    max-width: 46.875%;/*300px; */
-    /*переделать на % - тогда она будет сжиматься */
-    margin-left: 3.12%/*20px;*/
-  }
 
-  .news-item__title--view {
-    margin-top: -1.67%;/*-5px;*/
-    /*margin-left: 21px;*/
-    margin-bottom: 2.67%;/*8px;*/
-  }
-
+    /**************************************************************/
 
 }
-
-
-/*@media (min-width: 1000px) and (max-width: 1023px) {
-
-  .test {
-    width: 320px;
-    height: 200px;
-    background-color: rgba(255, 0, 0, 0.5);
-  }
-  .test--main {
-    height: 230px;
-  }
-
-
-
-  .news {
-    background-repeat: no-repeat;
-    background-image: url( "../images/index-mobile.png" );
-  }
-
-  .view-control {
-    display: none;
-  }
-  .news--size {
-    max-width: 320px;
-    justify-content: space-between;
-  }
-
-  .news-item--size {
-    width: 100%;
-  }
-
-  /*.news-item__title--inside--size { /*для pixel perfect подкорректировать значения процентов*/
-    /*margin-top: 7.8%;
-    bottom: 10%;
-    left: 6.25%;
-  }*/
-
-  /*.news-item:nth-child(2) {
-    margin-bottom: 45px;
-  }
-
-  .news-item:nth-child(3) {
-    order: 2;
-  }
-
-  .news-item:nth-child(7) {
-    order: 1;
-    margin-bottom: 40px;
-  }
-
-  .news-item:nth-child(6) {
-    margin-bottom: 46px;
-  }
-
-  .news-item--main-news {
-    margin-bottom: 50px;
-  }
-}*/
 
 
 
 @media (min-width: 1024px) and (max-width: 1989px) {
-/****************************************/
-/*режим блочный 1024*/
+  /****************************************/
+  /*режим блочный 1024*/
 
-  .news {
+  /*.news {
       background-repeat: no-repeat;
       background-image: url( "../images/index-tablet.png" );
     }
 
-
   .news-item:nth-child(1) { order: 1;}
+
   .news-item:nth-child(2) { order: 3;}
+
   .news-item:nth-child(3) { order: 5;}
+
   .news-item:nth-child(4) { order: 2;}
+
   .news-item:nth-child(5) { order: 4;}
+
   .news-item:nth-child(6) { order: 8;}
+
   .news-item:nth-child(7) { order: 6;}
+
   .news-item:nth-child(8) { order: 7;}
-
-
 
   .news-wrapper--size {
     width: 640px;
@@ -306,24 +247,23 @@ body {
   .news-item__abstract--invisible {
     display: none;
   }
-/*****************************************/
+  /*****************************************/
 
 
-
-
-/*******************************************/
-/*режим строка 1024*/
-  /*.news {
+  /*******************************************/
+  /*режим строка 1024*/
+  .news {
     background-repeat: no-repeat;
     background-image: url( "../images/index-tablet-line.png" );
   }
 
   .news-wrapper--size {
-    width: 640px;
+    /*width: 640px;*/
+    width: 62.5% /*тогда получается, что элементы новостей резиновые*/
   }
 
   .news--size {
-    max-width: 100%;
+    width: 100%;
   }
 
   .news--view {
@@ -332,7 +272,7 @@ body {
   }
 
   .news-item--size {
-    max-width: 100%;
+    width: 100%;
     background-color: rgba(10,200,15,0.1);
   }
 
@@ -342,11 +282,11 @@ body {
   }
 
   .news-item__image--size {
-    max-width: 46.875%;
+    width: 46.875%;
   }
 
   .news-item__image--main-news {
-    max-width: 100%;
+    width: 100%;
   }
 
   .news-item__description {
@@ -357,30 +297,35 @@ body {
   .news-item__title--view {
     margin-top: -1.67%;
     margin-bottom: 2.67%;
-  }*/
+  }
 
-/**************************************************************/
+  /**************************************************************/
 
 }
 
 @media (min-width: 1990px) {
+  /*режии блок 1990px*/
 
-/*режии блок 1990px*/
-
-.news {
+  .news {
   background-repeat: no-repeat;
   background-image: url( "../images/index-desktop.png" );
-}
+  }
 
   .news-item:nth-child(1) { order: 1;}
-  .news-item:nth-child(2) { order: 4;}
-  .news-item:nth-child(3) { order: 6;}
-  .news-item:nth-child(4) { order: 2;}
-  .news-item:nth-child(5) { order: 5;}
-  .news-item:nth-child(6) { order: 3;}
-  .news-item:nth-child(7) { order: 7;}
-  .news-item:nth-child(8) { order: 8;}
 
+  .news-item:nth-child(2) { order: 4;}
+
+  .news-item:nth-child(3) { order: 6;}
+
+  .news-item:nth-child(4) { order: 2;}
+
+  .news-item:nth-child(5) { order: 5;}
+
+  .news-item:nth-child(6) { order: 3;}
+
+  .news-item:nth-child(7) { order: 7;}
+
+  .news-item:nth-child(8) { order: 8;}
 
   .news-wrapper--size {
     width: 980px;
@@ -412,9 +357,7 @@ body {
 
   .news-item--main {
     max-width: 65.306%;
-    /*margin-bottom: 8.5%;*/
   }
-
 
   .news-item__image--size {
     max-width: 100%;
@@ -432,119 +375,52 @@ body {
     margin-top: 3.5%;
   }
 
-/*************************************************************/
-/*режим строка 1990 */
-  /*.news {
-    background-repeat: no-repeat;
-    background-image: url( "../images/index-desktop-line.png" );
-  }
+  /*режим строка 1990 */
+      /*.news {
+        background-repeat: no-repeat;
+        background-image: url( "../images/index-desktop-line.png" );
+      }
 
-  .news-wrapper--size {
-    width: 980px;
-  }
+      .news-wrapper--size {
+        width: 980px;
+      }
 
-  .news--size {
-    max-width: 65.3%;
-  }
+      .news--size {
+        max-width: 65.3%;
+      }
 
-  .news--view {
-    flex-direction: column;
-    background-color: rgba(250,200,15,10);
-  }
+      .news--view {
+        flex-direction: column;
+        background-color: rgba(250,200,15,10);
+      }
 
-  .news-item--size {
-    max-width: 100%;
-    background-color: rgba(10,200,15,0.1);
-  }
+      .news-item--size {
+        max-width: 100%;
+        background-color: rgba(10,200,15,0.1);
+      }
 
-  .news-item--view {
-      flex-direction: row;
-      margin-bottom: 12.5%;
-  }
+      .news-item--view {
+          flex-direction: row;
+          margin-bottom: 12.5%;
+      }
 
-  .news-item__image--size {
-    max-width: 46.875%;
-  }
+      .news-item__image--size {
+        max-width: 46.875%;
+      }
 
-  .news-item__image--main-news {
-    max-width: 100%;
-  }
+      .news-item__image--main-news {
+        max-width: 100%;
+      }
 
-  .news-item__description {
-    max-width: 46.875%;
-    margin-left: 3.12%;
-  }
+      .news-item__description {
+        max-width: 46.875%;
+        margin-left: 3.12%;
+      }
 
-  .news-item__title--view {
-    margin-top: -1.67%;
-    margin-bottom: 2.67%;
-  }*/
-/*************************************************************/
-
-
-}
-
-
-
-
-
-
-
-
-  /*.test {
-    width: 300px;
-    height: 200px;
-    background-color: rgba(255, 5, 150, 0.5);
-  }
-  .test--main {
-    width: 640px;
-    height: 230px;
-  }
-
-  .news {
-    background-repeat: no-repeat;
-    background-image: url( "../images/index-desktop.png" );
-  }
-
-
-  .news-item__title {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-
-
-
-
-
-  .news--size {
-    width: 980px;
-    justify-content: space-between;
-  }
-
-  .news-item--size {
-    width: 30.6%;
-    /*margin-bottom: 4.1%;*/
-  /*}
-
-  /*.news-item__title--inside--size {
-    margin-top: 0;
-    bottom: 10%;
-    left: 3.1%;
-  }*/
-
-  /*.news-item--main-news { /*.news-item:nth-child(5) */
-     /*width: 65.3%;
-    }
-
-  .news-item:nth-child(4) { /* почему-то если не прописать явно magrin , то берется более  специфичный марджин из min-width: 1024 px*/
-    /*margin-bottom: 4.1%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .news-item:nth-child(3) {
-    order: 0;
-  }*/
+      .news-item__title--view {
+        margin-top: -1.67%;
+        margin-bottom: 2.67%;
+      }*/
+  /*************************************************************/
 
 }
