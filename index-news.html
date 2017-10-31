@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-
     <head>
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style/normalize.css">
-        <!--<link rel="stylesheet" type="text/css" href="style/style.css">-->
+        <link rel="stylesheet" type="text/css" href="style/style.css">
         <!--<link rel="stylesheet" type="text/css" href="style/style-block.css">-->
-        <link rel="stylesheet" type="text/css" href="style/style-line.css">
+        <!--<link rel="stylesheet" type="text/css" href="style/style-line.css">-->
         <link rel="stylesheet" type="text/css" href="style/font-awesome.css">
 		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
@@ -16,158 +15,188 @@
 
     <body>
 
-      <div id="view-control" class = "view-control view-control--right">
+    		<div id="view-control" class = "view-control view-control--right">
 
-         <i data-size="fullview" class="view-control__button view-control__button--active fa fa-th-large fa-3x"></i>
-    		 <i data-size="stroke" class="view-control__button fa fa-list fa-3x"></i>
+    			<i data-size="block" class="view-control__button view-control__button--active fa fa-th-large fa-3x"></i>
 
-      </div>
+    			<i data-size="row" class="view-control__button fa fa-list fa-3x"></i>
 
-      <div class="news-wrapper news-wrapper--size">
+    		</div>
 
-        <div class="news news--size news--view">
+    		<div id="view" class="block">
 
-          <!-- Блок №1 -->
-          <div class="news-item news-item--size news-item--view" >
+    			<div class="news-wrapper news-wrapper--size">
 
-            <div class="news-item__image news-item__image--size">
-              <picture>
-                <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img src="images/news-item__image-320px.png" width="100%"  alt="news-1">
-              </picture>
-            </div>
+    				<div class="news news--size news--view">
 
-            <div class="news-item__description">
-              <h2 class="news-item__title news-item__title--view">Культурный дольник: языковая материя <strong> или правило альтернанса? </strong></h2>
-              <p class="news-item__abstract news-item__abstract--view"> Ритмическая организованность таких стихов не всегда очевидна
-                при чтении "про себя", но басня нивелирует литературный пастиш.</p>
-            </div>
+    					<!-- Блок №1 -->
+    					<div class="news-item news-item--size news-item--view" >
 
-          </div>
+    						<div class="news-item__image news-item__image--size">
 
-          <!-- Блок №2 -->
-          <div class="news-item news-item--size news-item--view" >
+    							<picture>
+    								<source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
+    								<img src="images/news-item__image-320px.png" width="100%"  alt="news-1">
+    							</picture>
 
-            <div class="news-item__image news-item__image--size">
-              <picture>
-                <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img src="images/news-item__image-320px.png" width="100%"  alt="news-2">
-              </picture>
-            </div>
+    						</div>
 
-            <div class="news-item__description">
-              <h2 class="news-item__title news-item__title--view">Ложная цитата как жанр </strong></h2>
-              <p class="news-item__abstract news-item__abstract--view"> Тоника приводит зачин. Особую ценность, на наш взгляд, представляет цикл нивелирует ритм.</p>
-            </div>
+    						<div class="news-item__description">
 
-          </div>
+    								<h2 class="news-item__title news-item__title--view">Культурный дольник: языковая материя <strong> или правило альтернанса? </strong></h2>
+    								<p class="news-item__abstract news-item__abstract--view"> Ритмическая организованность таких стихов не всегда очевидна
+    									при чтении "про себя", но басня нивелирует литературный пастиш.</p>
+    						</div>
 
-          <!-- Блок №3 -->
-          <div class="news-item news-item--size news-item--view" >
+    					</div>
 
-            <div class="news-item__image news-item__image--size">
-              <picture>
-                <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img src="images/news-item__image-320px.png" width="100%"  alt="news-3">
-              </picture>
-            </div>
+    					<!-- Блок №2 -->
+    					<div class="news-item news-item--size news-item--view" >
 
-              <div class="news-item__description">
-                  <h2 class="news-item__title news-item__title--view">Диссонансный дольник: гипотеза и теории</h2>
-                  <p class="news-item__abstract news-item__abstract--view"> Метонимия отражает литературный подтекст. Синхрония традиционно осознаёт стих.</p>
-              </div>
+    						<div class="news-item__image news-item__image--size">
 
-          </div>
+    							<picture>
+    								<source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
+    								<img src="images/news-item__image-320px.png" width="100%"  alt="news-2">
+    							</picture>
 
-          <!-- Блок №4 -->
-          <div class="news-item news-item--size news-item--view" >
+    						</div>
 
-            <div class="news-item__image news-item__image--size">
-              <picture>
-                <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img src="images/news-item__image-320px.png" width="100%"  alt="news-4">
-              </picture>
-            </div>
+    						<div class="news-item__description">
 
-            <div class="news-item__description">
-              <h2 class="news-item__title news-item__title--view">Мифопорождающее <strong> текстовое устройство </strong> как познание текста</h2>
-              <p class="news-item__abstract news-item__abstract--view"></p>
-            </div>
+    							<h2 class="news-item__title news-item__title--view">Ложная цитата как жанр</h2>
+    							<p class="news-item__abstract news-item__abstract--view"> Тоника приводит зачин. Особую ценность, на наш взгляд, представляет цикл нивелирует ритм.</p>
 
-          </div>
+    						</div>
 
-          <!-- Блок №5 -->
-          <div class="news-item news-item--size news-item--view news-item--main" >
+    					</div>
 
-              <div class="news-item__image news-item__image--main-news ">
+    					<!-- Блок №3 -->
+    					<div class="news-item news-item--size news-item--view" >
 
-                <picture>
-                  <source media = "(min-width: 1024px)" srcset = "images/news-item__telephone-640px.png"  >
-                  <img src="images/news-item__telephone-320px.png" width="100%" alt="news-5">
-                </picture>
+    						<div class="news-item__image news-item__image--size">
 
-                <h2 class="news-item__title news-item__title--main">Словесный дискурс: <br> основные моменты</h2>
+    							<picture>
+    								<source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
+    								<img src="images/news-item__image-320px.png" width="100%"  alt="news-3">
+    							</picture>
 
-              </div>
+    						</div>
 
+    						<div class="news-item__description">
 
-          </div>
+    							<h2 class="news-item__title news-item__title--view">Диссонансный дольник: гипотеза и теории</h2>
+    							<p class="news-item__abstract news-item__abstract--view"> Метонимия отражает литературный подтекст. Синхрония традиционно осознаёт стих.</p>
 
-          <!-- Блок №6 -->
-          <div class="news-item news-item--size news-item--view">
+    						</div>
 
-            <div class="news-item__image news-item__image--size">
-              <picture>
-                <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img src="images/news-item__image-320px.png" width="100%"  alt="news-6">
-              </picture>
-            </div>
+    					</div>
 
-            <div class="news-item__description news-item__description--change-margin">
-              <h2 class="news-item__title news-item__title--view">Диссонансный ритмический рисунок в XXI веке</h2>
-              <p class="news-item__abstract news-item__abstract--view "> Такое понимание синтагмы восходит к Ф.де Соссюру.</p>
-            </div>
+    					<!-- Блок №4 -->
+    					<div class="news-item news-item--size news-item--view" >
 
-          </div>
+    						<div class="news-item__image news-item__image--size">
 
-          <!-- Блок №7 -->
-          <div class="news-item news-item--size news-item--view">
+    							<picture>
+    								<source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
+    								<img src="images/news-item__image-320px.png" width="100%"  alt="news-4">
+    							</picture>
 
-            <div class="news-item__image news-item__image--size">
-              <picture>
-                <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                <img src="images/news-item__image-320px.png" width="100%"  alt="news-7">
-              </picture>
-            </div>
+    						</div>
 
-            <div class="news-item__description">
-              <h2 class="news-item__title news-item__title--view">Мелодический композиционный анализ: <strong class="news-item__emphasis"> акцент или дактиль?</strong></h2>
-              <p class="news-item__abstract news-item__abstract--view"></p>
-            </div>
+    						<div class="news-item__description">
 
-          </div>
+    							<h2 class="news-item__title news-item__title--view">Мифопорождающее <strong> текстовое устройство </strong> как познание текста</h2>
+    							<p class="news-item__abstract news-item__abstract--view"></p>
 
-          <!-- Блок №8 -->
-          <div class="news-item news-item--size news-item--view">
+    						</div>
 
-            <div class="news-item__image news-item__image--size">
-                <picture>
-                  <source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
-                  <img src="images/news-item__image-320px.png" width="100%"  alt="news-8">
-                </picture>
-            </div>
+    					</div>
 
-            <div class="news-item__description">
-              <h2 class="news-item__title news-item__title--view">Словесный подтекст: брахикаталектический стих или мужская рифма?</h2>
-              <p class="news-item__abstract news-item__abstract--view "></p>
-            </div>
+    					<!-- Блок №5 -->
+    					<div class="news-item news-item--size news-item--view news-item--main" >
 
-          </div>
+    						<div class="news-item__image news-item__image--main-news ">
 
-        </div>
+    							<picture>
+    								<source media = "(min-width: 1024px)" srcset = "images/news-item__telephone-640px.png"  >
+    								<img src="images/news-item__telephone-320px.png" width="100%" alt="news-5">
+    							</picture>
 
-      </div>
+    							<h2 class="news-item__title news-item__title--main">Словесный дискурс: <br> основные моменты</h2>
+
+    						</div>
+
+    					</div>
+
+    					<!-- Блок №6 -->
+    					<div class="news-item news-item--size news-item--view">
+
+    						<div class="news-item__image news-item__image--size">
+
+    							<picture>
+    								<source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
+    								<img src="images/news-item__image-320px.png" width="100%"  alt="news-6">
+    							</picture>
+
+    						</div>
+
+    						<div class="news-item__description news-item__description--change-margin">
+
+    							<h2 class="news-item__title news-item__title--view">Диссонансный ритмический рисунок в XXI веке</h2>
+    							<p class="news-item__abstract news-item__abstract--view "> Такое понимание синтагмы восходит к Ф.де Соссюру.</p>
+
+    						</div>
+
+    					</div>
+
+    					<!-- Блок №7 -->
+    					<div class="news-item news-item--size news-item--view">
+
+    						<div class="news-item__image news-item__image--size">
+
+    							<picture>
+    								<source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
+    								<img src="images/news-item__image-320px.png" width="100%"  alt="news-7">
+    							</picture>
+
+    						</div>
+
+    						<div class="news-item__description">
+
+    							<h2 class="news-item__title news-item__title--view">Мелодический композиционный анализ: <strong class="news-item__emphasis"> акцент или дактиль?</strong></h2>
+    							<p class="news-item__abstract news-item__abstract--view"></p>
+
+    						</div>
+
+    					</div>
+
+    					<!-- Блок №8 -->
+    					<div class="news-item news-item--size news-item--view">
+
+    						<div class="news-item__image news-item__image--size">
+
+    							<picture>
+    								<source media = "(min-width: 1024px)" srcset = "images/news-item__image-300px.png">
+    								<img src="images/news-item__image-320px.png" width="100%"  alt="news-8">
+    							</picture>
+
+    						</div>
+
+    						<div class="news-item__description">
+
+    							<h2 class="news-item__title news-item__title--view">Словесный подтекст: брахикаталектический стих или мужская рифма?</h2>
+    							<p class="news-item__abstract news-item__abstract--view"></p>
+
+    						</div>
+
+    					</div>
+
+    				</div>
+
+    			</div>
+
+    		</div>
 
     </body>
-
 </html>
